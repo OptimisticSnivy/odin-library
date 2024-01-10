@@ -1,0 +1,13 @@
+body {
+  background-color: #1f2937;
+}
+
+.container {
+  color: paleturquoise;
+  display: flex;
+  font-size: 100px;
+  font-family: "Iosevka", Lato, sans-serif;
+  flex-direction: row;
+  margin-left: 10px;
+  justify-content: center;
+}
