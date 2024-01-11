@@ -27,12 +27,24 @@ function addBook(bname, inp_author, inp_rstatus) {
 	btn.className = "book";
 	book.appendChild(btn);
 
+	let rbtn = document.createElement("button");
+	rbtn.textContent = "Change Read Status";
+	rbtn.className = "book";
+	book.appendChild(rbtn);
+
 	let bookBuff = document.querySelector(".bookBuff");
 	bookBuff.appendChild(bookCon);
 	btn.addEventListener("click", function() {
 		console.log("Remove!");
 		bookBuff.removeChild(bookCon);
 	});
+
+	let rtoggle = document.querySelector(".bookBuff");
+	rtoggle.appendChild(bookCon);
+	rbtn.addEventListener("click", function() {
+		console.log(book.lastChild);
+	});
+
 }
 
 let bname = "Dune";
@@ -40,5 +52,4 @@ let author = "Frank Herbert";
 let read = "Read";
 
 addBook(bname,author,read);
-addBook("Dune Messiah",author,read);
 
