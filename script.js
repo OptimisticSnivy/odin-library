@@ -39,12 +39,17 @@ function addBook(bname, inp_author, inp_rstatus) {
 		bookBuff.removeChild(bookCon);
 	});
 
+	// To-do: Optimize this!
 	let rtoggle = document.querySelector(".bookBuff");
 	rtoggle.appendChild(bookCon);
 	rbtn.addEventListener("click", function() {
-		console.log(book.lastChild);
+		if(book.firstChild.nextSibling.nextSibling.innerText== "Read"){
+			book.firstChild.nextSibling.nextSibling.innerText= "Not Read";
+		}
+		else if(book.firstChild.nextSibling.nextSibling.innerText== "Not Read"){
+			book.firstChild.nextSibling.nextSibling.innerText= "Read";
+		}
 	});
-
 }
 
 let bname = "Dune";
@@ -52,4 +57,3 @@ let author = "Frank Herbert";
 let read = "Read";
 
 addBook(bname,author,read);
-
