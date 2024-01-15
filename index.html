@@ -25,13 +25,39 @@
     />
   </head>
   <body>
+    <dialog id="favDialog">
+      <form method="dialog">
+        <p>
+          <label>
+            Book Name:
+            <input id="name" onfocus="this.value=''" type="text" required />
+          </label>
+
+          <label>
+            Book Author:
+            <input id="author" onfocus="this.value=''" autocomplete="off" type="text" required />
+          </label>
+
+          <label>
+            Book Read:
+              <select>
+                <option value="default">Choose…</option>
+                <option>Read</option>
+                <option>Not Read</option>
+              </select>
+          </label>
+        </p>
+        <div>
+          <input type="submit" id="js-close" value="JS close" />
+        </div>
+      </form>
+    </dialog>
     <div class="container">Odin-Library</div>
     <div class="bookHeader">
       <div class="book">BookName</div>
       <div class="book">Author</div>
       <div class="book">ReadStatus</div>
     </div>
-    <div class="bookBuff">
-    </div>
+    <div class="bookBuff"></div>
   </body>
 </html>
